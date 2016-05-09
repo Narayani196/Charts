@@ -1,0 +1,19 @@
+{
+	"TileCollection" : [
+		
+		{
+			"icon" : "travel-expense-report",
+			"number" : "281",
+			"numberUnit" : "cases",
+			"title" : "Create Case"
+		
+		},
+		{
+			"icon" : "search",
+			"title" : "Search"
+		
+			
+		}
+	
+	]
+}

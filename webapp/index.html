@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>AccidentMgmt</title>
+	
+
+		<script id="sap-ui-bootstrap"
+			src="../../resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m, sap.makit"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"AccidentMgmt": "./"}'>
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC33kLtrACTvQy3-AQ2pKL8yVFCyY4bpnA&sensor=false"  
+                type ="text/javascript"></script> 
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<style>  
+            .myMap {  
+                height: 25rem;  
+                width: 45rem;  
+            }  
+            
+        </style>  
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "AccidentMgmt"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>

@@ -1,0 +1,33 @@
+<mvc:View controllerName="AccidentMgmt.controller.launchpad" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<App>
+		<pages>
+			<Page
+		showHeader="false"
+		enableScrolling="false" >
+		<TileContainer
+			id="container"
+			tileDelete="handleTileDelete"
+			tiles="{/TileCollection}">
+			<StandardTile
+				icon="sap-icon://{icon}"
+				type="{type}"
+				number="{number}"
+				numberUnit="{numberUnit}"
+				title="{title}"
+				info="{info}"
+				press = "handleTilePress"
+			/>
+		</TileContainer>
+		<!--<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+					<Button text="Edit" press="handleEditPress" />
+					<Button text="Busy state" press="handleBusyPress" />
+				<ToolbarSpacer/>
+			</Toolbar>
+		</footer>-->
+	</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,97 @@
+<mvc:View controllerName="AccidentMgmt.controller.main" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+	<App>
+		<Page navButtonPress="onNavBack" showNavButton="true" title="Title">
+			<content>
+				<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+					<detailPages>
+					<Page id="readDetail" title="Case Details" class="sapUiStdPage">
+						<headerContent>
+			<Button icon="sap-icon://add-contact" tooltip="Create Case" press = "onPressNavToDetail" />
+		</headerContent>
+				<content>
+					<IconTabBar
+		id="idReadDetailTabs"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter
+				text="Case">
+				<Text text="Case content goes here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				text="Person">
+				<Text text="Person go here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				text="Vehicle">
+				<Text text="Vehicle go here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				text="Penalty">
+				<Text text="Penalty content goes here ..." />
+			</IconTabFilter>
+				<IconTabFilter
+				text="Location">
+				<Text text="Location content goes here ..." />
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+				</content>
+			</Page>
+			
+			<Page id="createDetail" title="Create Case" class="sapUiStdPage" showNavButton="true"
+				  navButtonText="Back" navButtonPress="onPressDetailBack">
+				<content>
+				<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding" select="selectTab">
+		<items>
+			<IconTabFilter
+				text="Case">
+				<Text text="Case content goes here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				text="Person">
+				<Text text="Person go here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				text="Vehicle">
+				<Text text="Vehicle go here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				text="Penalty">
+				<Text text="Penalty content goes here ..." />
+			</IconTabFilter>
+				<IconTabFilter
+				text="Location" >
+				<VBox fitContainer="true" justifyContent="Center" alignItems="Center">  
+                <HBox fitContainer="true" justifyContent="Center" alignItems="Center">  
+                    <Input id="inpSearch" editable="true" value="" maxLength="80"/>  
+                    <Button id="bntSearch" text="Search" tap="actSearch" />       
+                </HBox>  
+                <HBox id="map_canvas" fitContainer="true" justifyContent="Center" alignItems="Center" />  
+                              </VBox>  
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+				</content>
+			</Page>
+					</detailPages>
+					<masterPages>
+		
+					<List itemPress="onListItemPress" items = "{path : '/value'}" headerText = "Cases">
+						
+							<StandardListItem type="Active" title = "{Type}" description = "{Description}"  />
+					
+					</List>
+			
+		</masterPages>
+				</SplitApp>
+			</content>
+			
+
+		</Page>
+	</App>
+</mvc:View>
