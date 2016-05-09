@@ -33,7 +33,7 @@
 			</IconTabFilter>
 				<IconTabFilter
 				text="Location">
-				<Text text="Location contenft ..." />
+				<Text text="Location content goes here ..." />
 			</IconTabFilter>
 		</items>
 	</IconTabBar>
